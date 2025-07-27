@@ -1,0 +1,68 @@
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  font-family: Arial, sans-serif;
+}
+
+
+/* .navbar {
+  background-color: #333;
+  padding: 1em;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 2em;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+} */
+
+/* Main content grows to fill space */
+.content {
+  flex: 1;
+  padding: 2em;
+  text-align: center;
+  padding-top: 70px; /* adjust based on your navbar height */
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  height: 50%;
+  width: 100%;
+  background-image: url('../image/orangefooter.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+  text-align: center;
+  z-index: 1000;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; /* Puts content at the bottom */
+  align-items: center;
+  padding-bottom: 1em; /* Adds spacing from bottom edge */
+}
+.wrapper {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+    @media (min-width: 992px) {
+      .offcanvas,
+      .mobile,
+      .navbar-toggler {
+        display: none !important;
+      }
+    }
