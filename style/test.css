@@ -10,24 +10,13 @@ html, body {
   font-family: Arial, sans-serif;
 }
 
-
-/* .navbar {
-  background-color: #333;
-  padding: 1em;
+.transparent-navbar {
+  background-color: transparent !important;
+  box-shadow: none;
+  position: fixed;
+  width: 100%;
+  z-index: 1000; /* optional: removes shadow */
 }
-
-.navbar ul {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  gap: 2em;
-}
-
-.navbar a {
-  color: white;
-  text-decoration: none;
-} */
-
 /* Main content grows to fill space */
 .content {
   flex: 1;
@@ -56,9 +45,32 @@ html, body {
   padding-bottom: 1em; /* Adds spacing from bottom edge */
 }
 .wrapper {
-  padding-left: 2rem;
-  padding-right: 2rem;
+  padding-left: 100px;
+  padding-right: 100px;
 }
+
+.landing-section {
+  background-image: url('../image/landingbg.svg'); /* or use .svg or .png */
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+  padding: 100px 20px; /* adjusts for navbar height and spacing */
+  color: black; /* optional: make text readable */
+  text-align: center;
+  height:100%;
+}
+
+.landing-content h1 {
+  font-size: 3rem;
+}
+
+.landing-content p {
+  font-size: 1.25rem;
+}
+.navbar{
+  background-color: transparent !important;
+}
+
     @media (min-width: 992px) {
       .offcanvas,
       .mobile,
@@ -66,3 +78,14 @@ html, body {
         display: none !important;
       }
     }
+
+  /* Mobile override */
+@media (max-width: 767.98px) {
+  .landing-section {
+    background-image: url('../image/landingbg.svg');
+    background-position: right;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 60%; /* ✅ Set a proper mobile height */
+  }
+}
